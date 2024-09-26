@@ -1,0 +1,18 @@
+import pandas as pd
+
+data = pd.read_csv('file.csv')
+
+data.to_csv('output.csv', index=False)
+
+# Display details of the dataset
+print("Number of Rows:", data.shape[0])
+print("Number of Columns:", data.shape[1])
+print("First Five Rows:\n", data.head())
+print("Size of Dataset:", data.size)
+print("Missing Values:\n", data.isnull().sum())
+
+# Numerical columns statistics
+print("Sum of Numerical Columns:\n", data.select_dtypes(include='number').sum())
+print("Average of Numerical Columns:\n", data.select_dtypes(include='number').mean())
+print("Minimum Values in Numerical Columns:\n", data.select_dtypes(include='number').min())
+print("Maximum Values in Numerical Columns:\n", data.select_dtypes(include='number').max())
