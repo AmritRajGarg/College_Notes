@@ -20,3 +20,4 @@ print("Sum of Numerical Columns:\n", numerical_data.sum())
 print("Average of Numerical Columns:\n", numerical_data.mean())
 print("Minimum Values in Numerical Columns:\n", numerical_data.min())
 print("Maximum Values in Numerical Columns:\n", numerical_data.max())
+
